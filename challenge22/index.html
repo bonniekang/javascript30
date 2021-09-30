@@ -33,8 +33,10 @@
     document.body.append(hightlight)
 
     function hightlightLink(){
-        console.log('Highlight!')
+        console.log(this)
     }
+
+    triggers.forEach(a => a.addEventListener('mouseenter', hightlightLink))
 
   </script>
 </body>
