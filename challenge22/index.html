@@ -33,10 +33,14 @@
     document.body.append(hightlight)
 
     function hightlightLink(){
-        console.log(this)
+        const linkCoords = this.getBoundingClientRect()
+        hightlight.style.width = `${linkCoords.width}px`
+        hightlight.style.height = `${linkCoords.height}px`
     }
 
     triggers.forEach(a => a.addEventListener('mouseenter', hightlightLink))
+
+
 
   </script>
 </body>
