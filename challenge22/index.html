@@ -36,6 +36,8 @@
         const linkCoords = this.getBoundingClientRect()
         hightlight.style.width = `${linkCoords.width}px`
         hightlight.style.height = `${linkCoords.height}px`
+        hightlight.style.transform = `translate(${linkCoords.left}pz, ${linkCoords.top}px)`
+
     }
 
     triggers.forEach(a => a.addEventListener('mouseenter', hightlightLink))
