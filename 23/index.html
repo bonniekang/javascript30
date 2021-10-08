@@ -48,6 +48,13 @@
       console.log(this.value)
   }
 
+  function toggle(startOver = true){
+      speechSynthesis.cancel()
+      if(startOver){
+        speechSynthesis.speak(msg)
+      }
+  }
+
   speechSynthesis.addEventListener('voiceschanged', populateVoices)
 
 
